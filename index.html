@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config  -->
+    <style>
+      @font-face {
+        font-family: "MonumentExtended-Ultrabold";
+        src: url("/fonts/MonumentExtended-Ultrabold.otf") format("otf"),
+          url("/fonts/MonumentExtended-Ultrabold.otf") format("otf");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .font-monument {
+        font-family: "MonumentExtended-Ultrabold", sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+              monument: ["MonumentExtended-Ultrabold", "sans-serif"],
+            },
+            backgroundImage: {
+              "green-gradient": "linear-gradient(to top,#004022, #00A659 )",
+              "deepgreen-gradient":
+                "linear-gradient(to right,#00A657, #00F050)",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- title -->
+    <title>NextGen IT</title>
+  </head>
+  <body>
+    <!-- navbar start -->
+
+<!-- OUTER FIXED WRAPPER -->
+<div class="fixed top-0 left-0 w-full z-10">
+  <!-- INNER CENTERED CONTAINER -->
+  <div class="w-9/12 mx-auto">
+    <nav class="py-4 px-6 flex items-center justify-between bg-white shadow-md rounded-lg">
+      <!-- Logo -->
+      <div class="flex items-center w-24 sm:w-32">
+        <a href="/">
+          <img
+            src="/images/navbarLogo.png"
+            alt="Logo"
+            class="w-full h-auto"
+          />
+        </a>
+      </div>
+
+      <div class="flex gap-5">
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-6 items-center text-xs font-semibold font-montserrat">
+          <a href="/">HOME</a>
+          <a href="/about">ABOUT</a>
+          <a href="/projects">PROJECTS</a>
+          <a href="/corporate">CORPORATE</a>
+          <a href="/contact">CONTACT</a>
+        </div>
+
+        <!-- Desktop Logins -->
+        <div class="hidden lg:flex space-x-6 text-sm">
+          <a
+            href="https://app.marylandhomesltd.com/logincustomer/index/100"
+            target="_blank"
+            class="text-xs font-semibold font-montserrat hover:underline text-white px-4 py-2 rounded-lg bg-[#00A659]"
+          >
+            Log in / Register
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuButton" class="lg:hidden text-2xl focus:outline-none">
+        ☰
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden absolute top-16 md:top-20 left-0 w-full bg-white shadow-md rounded-lg px-4 py-4 text-sm space-y-3"
+    >
+      <a href="/" class="block text-black font-normal hover:text-primary">HOME</a>
+      <a href="/about" class="block text-black font-normal hover:text-primary">ABOUT</a>
+      <a href="/projects" class="block text-black font-normal hover:text-primary">PROJECTS</a>
+      <a href="/corporate" class="block text-black font-normal hover:text-primary">CORPORATE</a>
+      <a href="/contact" class="block text-black font-normal hover:text-primary">CONTACT</a>
+
+      <div class="pt-3 border-t border-gray-200 space-y-2">
+        <a
+          href="https://app.marylandhomesltd.com/logincustomer/index/100"
+          target="_blank"
+          class="block font-semibold font-montserrat text-xs hover:underline bg-[#004022] text-white px-4 py-2 rounded"
+        >
+          Log in / Register
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- navbar end -->
+    <!-- hero section -->
+    <div
+      class="relative bg-gray-500 w-full h-[350px] md:h-[400px] lg:h-[110vh] bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/images/hero.jpg')"
+    ></div>
+    <!-- heor section -->
+    <!-- why next-gen start -->
+    <div
+      class="md:flex lg:px-9 md:px-5 px-3 mb-9 mt-9 lg:gap-9 md:gap-6 items-center"
+    >
+      <div
+        class="bg-[#F0F0F0] shadow-[#000000] drop-shadow-[0_3px_2px_rgba(0,0,0,0.40)] md:px-10 md:py-14 px-5 py-9 rounded-[20px]"
+      >
+        <p class="font-bold font-montserrat lg:text-2xl md:text-xl text-lg">
+          WHY <br />
+          <span
+            class="font-extrabold lg:text-5xl md:text-3xl text-2xl font-monument text-[#00A657] lg:leading-7 md:leading-5 leading-4"
+            >NEXTGENIT</span
+          >
+        </p>
+      </div>
+      <!-- icons -->
+      <div
+        class="flex md:justify-start justify-center font-montserrat font-extrabold lg:text-xl md:text-xs text-[8px] w-full lg:gap-48 md:gap-16 gap-4 md:mt-0 mt-4"
+      >
+        <div class="space-y-3">
+          <div class="flex items-center gap-4">
+            <img
+              src="/images/icons/support.png"
+              alt="NextGenIT"
+              class="lg:w-12 md:w-10 w-8"
+            />
+            <p>LIVE SUPPORT</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <img
+              src="/images/icons/job.png"
+              alt="NextGenIT"
+              class="lg:w-12 md:w-10 w-8"
+            />
+            <p>JOB SUPPORT</p>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center gap-4">
+            <img
+              src="/images/icons/library.png"
+              alt="NextGenIT"
+              class="lg:w-12 md:w-10 w-8"
+            />
+            <p>DIGITAL LIBRARY</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <img
+              src="/images/icons/badge.png"
+              alt="NextGenIT"
+              class="lg:w-12 md:w-10 w-8"
+            />
+            <p>EXPERT INSTRUCTOR</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- why next-gen end -->
+    <!--  courses start -->
+    <div
+      class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 lg:gap-x-7 md:gap-x-6 md:gap-y-5 gap-y-5 lg:px-9 md:px-5 px-3"
+    >
+      <!-- image - 1 -->
+      <div class="">
+        <img
+          src="/images/courses/DM.jpg"
+          alt="courses"
+          class="rounded-t-[21px] w-full lg:h-[340px] md:h-[300px] h-[250px]"
+        />
+        <div class="bg-green-gradient py-5 px-3 rounded-b-[10px]">
+          <div
+            class="font-montserrat font-bold lg:text-lg md:text-lg text-sm text-white flex justify-between"
+          >
+            <div class="leading-6">
+              <p>19 seat left</p>
+              <p>Batch 11</p>
+            </div>
+            <div>
+              <p>8 days to start</p>
+            </div>
+          </div>
+          <button
+            class="flex font-bold lg:text-lg md:text-lg text-sm bg-white flex justify-between items-center py-3 px-8 rounded-md w-full mt-5 mb-5"
+          >
+            <p>ENROLL NOW</p>
+            <svg
+              fill="green"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M10 20A10 10 0 1 0 0 10a10 10 0 0 0 10 10zM8.711 4.3l5.7 5.766L8.7 15.711l-1.4-1.422 4.289-4.242-4.3-4.347z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- image - 2 -->
+      <div class="">
+        <img
+          src="/images/courses/SEO.jpg"
+          alt="courses"
+          class="rounded-t-[21px] w-full lg:h-[340px] md:h-[300px] h-[250px]"
+        />
+        <div class="bg-green-gradient py-5 px-3 rounded-b-[10px]">
+          <div
+            class="font-montserrat font-bold lg:text-lg md:text-lg text-sm text-white flex justify-between"
+          >
+            <div class="leading-6">
+              <p>19 seat left</p>
+              <p>Batch 11</p>
+            </div>
+            <div>
+              <p>8 days to start</p>
+            </div>
+          </div>
+          <button
+            class="flex font-bold lg:text-lg md:text-lg text-sm bg-white flex justify-between items-center py-3 px-8 rounded-md w-full mt-5 mb-5"
+          >
+            <p>ENROLL NOW</p>
+            <svg
+              fill="green"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M10 20A10 10 0 1 0 0 10a10 10 0 0 0 10 10zM8.711 4.3l5.7 5.766L8.7 15.711l-1.4-1.422 4.289-4.242-4.3-4.347z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- image - 3 -->
+      <div class="">
+        <img
+          src="/images/courses/LMP.jpg"
+          alt="courses"
+          class="rounded-t-[21px] w-full lg:h-[340px] md:h-[300px] h-[250px]"
+        />
+        <div class="bg-green-gradient py-5 px-3 rounded-b-[10px]">
+          <div
+            class="font-montserrat font-bold lg:text-lg md:text-lg text-sm text-white flex justify-between"
+          >
+            <div class="leading-6">
+              <p>19 seat left</p>
+              <p>Batch 11</p>
+            </div>
+            <div>
+              <p>8 days to start</p>
+            </div>
+          </div>
+          <button
+            class="flex font-bold lg:text-lg md:text-lg text-sm bg-white flex justify-between items-center py-3 px-8 rounded-md w-full mt-5 mb-5"
+          >
+            <p>ENROLL NOW</p>
+            <svg
+              fill="green"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M10 20A10 10 0 1 0 0 10a10 10 0 0 0 10 10zM8.711 4.3l5.7 5.766L8.7 15.711l-1.4-1.422 4.289-4.242-4.3-4.347z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- image - 4 -->
+      <div class="">
+        <img
+          src="/images/courses/WWD.jpg"
+          alt="courses"
+          class="rounded-t-[21px] w-full lg:h-[340px] md:h-[300px] h-[250px]"
+        />
+        <div class="bg-green-gradient py-5 px-3 rounded-b-[10px]">
+          <div
+            class="font-montserrat font-bold lg:text-lg md:text-lg text-sm text-white flex justify-between"
+          >
+            <div class="leading-6">
+              <p>19 seat left</p>
+              <p>Batch 11</p>
+            </div>
+            <div>
+              <p>8 days to start</p>
+            </div>
+          </div>
+          <button
+            class="flex font-bold lg:text-lg md:text-lg text-sm bg-white flex justify-between items-center py-3 px-8 rounded-md w-full mt-5 mb-5"
+          >
+            <p>ENROLL NOW</p>
+            <svg
+              fill="green"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M10 20A10 10 0 1 0 0 10a10 10 0 0 0 10 10zM8.711 4.3l5.7 5.766L8.7 15.711l-1.4-1.422 4.289-4.242-4.3-4.347z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- image - 5 -->
+      <div class="">
+        <img
+          src="/images/courses/DM.jpg"
+          alt="courses"
+          class="rounded-t-[21px] w-full lg:h-[340px] md:h-[300px] h-[250px]"
+        />
+        <div class="bg-green-gradient py-5 px-3 rounded-b-[10px]">
+          <div
+            class="font-montserrat font-bold lg:text-lg md:text-lg text-sm text-white flex justify-between"
+          >
+            <div class="leading-6">
+              <p>19 seat left</p>
+              <p>Batch 11</p>
+            </div>
+            <div>
+              <p>8 days to start</p>
+            </div>
+          </div>
+          <button
+            class="flex font-bold lg:text-lg md:text-lg text-sm bg-white flex justify-between items-center py-3 px-8 rounded-md w-full mt-5 mb-5"
+          >
+            <p>ENROLL NOW</p>
+            <svg
+              fill="green"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M10 20A10 10 0 1 0 0 10a10 10 0 0 0 10 10zM8.711 4.3l5.7 5.766L8.7 15.711l-1.4-1.422 4.289-4.242-4.3-4.347z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- image - 6 -->
+      <div class="">
+        <img
+          src="/images/courses/SEO.jpg"
+          alt="courses"
+          class="rounded-t-[21px] w-full lg:h-[340px] md:h-[300px] h-[250px]"
+        />
+        <div class="bg-green-gradient py-5 px-3 rounded-b-[10px]">
+          <div
+            class="font-montserrat font-bold lg:text-lg md:text-lg text-sm text-white flex justify-between"
+          >
+            <div class="leading-6">
+              <p>19 seat left</p>
+              <p>Batch 11</p>
+            </div>
+            <div>
+              <p>8 days to start</p>
+            </div>
+          </div>
+          <button
+            class="flex font-bold lg:text-lg md:text-lg text-sm bg-white flex justify-between items-center py-3 px-8 rounded-md w-full mt-5 mb-5"
+          >
+            <p>ENROLL NOW</p>
+            <svg
+              fill="green"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M10 20A10 10 0 1 0 0 10a10 10 0 0 0 10 10zM8.711 4.3l5.7 5.766L8.7 15.711l-1.4-1.422 4.289-4.242-4.3-4.347z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- courses end -->
+
+    <!-- newsletter start -->
+
+    <div class="lg:w-8/12 md:w-10/12 mx-auto px-4 py-10 font-montserrat">
+      <div class="md:px-5">
+        <hr class="border border-black text-center" />
+      </div>
+
+      <h2 class="text-center text-green-600 text-xl font-bold mb-14 mt-6">
+        NEWSLETTER
+      </h2>
+
+      <!-- Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div
+          class="border shadow-[#00000040] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]"
+        >
+          <div class="bg-green-600 text-white px-6 py-5 text-xs font-bold">
+            26th February 2024
+          </div>
+          <div class="px-7 py-20">
+            <h3 class="md:text-xl text-lg font-bold text-[#4C4C4C] leading-6">
+              WHY YOU NEED<br />
+              TO LEARN SEO<br />
+              TO STAY<br />COMPETITIVE
+            </h3>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="border shadow-[#00000040] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]"
+        >
+          <div class="bg-green-600 text-white px-6 py-5 text-xs font-bold">
+            26th February 2024
+          </div>
+          <div class="px-7 py-20">
+            <h3 class="md:text-xl text-lg font-bold text-[#4C4C4C]">
+              HOW TO FINE THE<br />
+              RYTHEME OF<br />
+              SOCIAL<br />
+              MEDIA TREND
+            </h3>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="border shadow-[#00000040] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]"
+        >
+          <div class="bg-green-600 text-white px-6 py-5 text-xs font-bold">
+            26th February 2024
+          </div>
+          <div class="px-7 py-20">
+            <h3 class="md:text-xl text-lg font-bold text-[#4C4C4C]">
+              ELEMENTOR OR<br />
+              WP BAKERY?<br />
+              WHICH ONE SUITS<br />
+              YOU THE MOST!
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-7">
+        <button
+          class="bg-green-600 text-white w-full py-2 text-center md:text-xl text-lg font-normal hover:bg-green-700 transition"
+        >
+          view all press realases
+        </button>
+      </div>
+    </div>
+    <!-- newsletter end -->
+
+    <!-- career start -->
+    <!-- <div class="mt-12 relative bg-[#F3F3F3]">
+      <div
+        class="flex items-center justify-center  w-11/12 bg-[#F3F3F3] py-20"
+      >
+        <div
+          class="font-montserrat text-base font-semibold text-end px-16 w-9/12 bg-[#F3F3F3]"
+        >
+          <p class="leading-5">
+            Even though I come from a non-CS background, I felt that
+            understanding data science would help me advance in my profession.
+            In order to do so, I enrolled in an Nextgen Data Science course.
+            After taking the Nextgen Data course, I learned that it is simple to
+            crack and that they made it even easier.
+          </p>
+          <p class="text-[#00A657]">TASNIA AFREE</p>
+        </div>
+        <div class="bg-white w-full flex flex-col md:flex-row items-center">
+       
+
+          <div
+            class="absolute  -top-12 -ml-9 rounded-full"
+          >
+            <img
+              src="/images/career/img1.png"
+              alt="Career"
+              class="object-cover w-72 h-full"
+            />
+          
+            <div
+              class="absolute -bottom-2 left-1/4 transform -translate-x-1/2  w-24 h-24 rounded-full"
+              style="background: linear-gradient(to bottom, #00a657, #00f050)"
+            ></div>
+          </div>
+
+       
+          <div
+            class="mt-10 md:mt-0 md:ml-10 text-end  font-montserrat w-full bg-[#F3F3F3]"
+          >
+            <h2 class="text-xl font-normal">BUILD YOUR CAREER</h2>
+            <h1 class="mt-2 text-4xl font-normal">
+              with <span class="text-[#00A657] font-black leading">NEXTGEN</span>
+            </h1>
+
+            <button
+              class="mt-6 px-6 py-3 bg-green-600 text-white font-semibold  flex items-center justify-end gap-2 hover:bg-green-700 transition w-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+              <p class="text-sm font-bold">ENROLL NOW</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- career end -->
+
+    <!-- footer start -->
+    <footer class="bg-green-500 text-white w-full">
+      <!-- Main Footer Section -->
+      <div class="container mx-auto px-4 py-8 w-8/12">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center md:items-start mb-6"
+        >
+          <!-- Navigation Links - Left Side -->
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 mb-6 md:mb-0 text-center md:text-left"
+          >
+            <div class="space-y-4 font-montserrat text-xs font-semibold">
+              <a href="#" class="block">ABOUT</a>
+              <a href="#" class="block">COURSES</a>
+              <a href="#" class="block">CONTACT</a>
+            </div>
+            <div class="space-y-4 font-montserrat text-xs font-semibold">
+              <a href="#" class="block">CAREER</a>
+              <a href="#" class="block">EVENTS</a>
+              <a href="#" class="block">NEWSLETTER</a>
+            </div>
+          </div>
+
+          <!-- Logo - Right Side -->
+          <div class="flex justify-center md:justify-end">
+            <div class="p-2 rounded">
+              <div class="font-bold">
+                <div class="text-end">
+                  <div class="flex justify-end">
+                    <img src="/images//footer.png" class="w-36" />
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold">
+                      98, Shiddeswary Outer Circular Road <br />
+                      Mohsin Khan Tower, Ramna, 4th floor<br />
+                      Phone : +8801400465574
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider Line -->
+        <div class="border-t border-green-400 my-4"></div>
+
+        <!-- Bottom Footer Section -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm"
+        >
+          <!-- Legal Links - Left Side -->
+          <div
+            class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0 text-center md:text-left text-xs font-montserrat font-semibold"
+          >
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">DISCLAIMER</a>
+            <a href="#">SITEMAP</a>
+          </div>
+
+          <!-- Copyright and Social - Right Side -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div
+              class="mb-2 md:mb-0 md:mr-4 text-center md:text-right flex gap-2 font-montserrat text-xs font-semibold items-center"
+            >
+              ALL RIGHT RESERVED BY NGIT 2025
+              <img src="/images//icons/linkedin.png" class="w-5" />
+              <img src="/images//icons/facebook.png" class="w-5" />
+            </div>
+            <div class="flex space-x-3">
+              <a href="#" class="hover:text-gray-200 transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="hover:text-gray-200 transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <div class="mb-48"></div>
+  </body>
+</html>
